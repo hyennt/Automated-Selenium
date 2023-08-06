@@ -1,0 +1,579 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>Free Wi-Fi | AWING</title>
+    
+    
+        <link rel="shortcut icon" href="/awicon.ico">
+        <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/captive-1.0.min.css?v=638269322528907894" rel="stylesheet">
+        <script src="/lib/jquery/jquery.min.js"></script>
+        <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/scripts/imagesloaded.pkgd.min.js"></script>     
+        <script src="/scripts/captive-1.1.min.js?v=638269322528908014"></script>
+    
+</head>
+<body>
+    
+<div id="layoutHeader" class="header" style="height: 60px;"><style>
+	.banner-top {
+		margin-top: 7px;
+		margin-left: 13px;
+		max-width: 90px;
+		max-height: 45px;
+	}
+</style> 
+<div class="header" id="header">
+	<img class="banner-top" src="/static/Files/layout/5197905656409960384/4857469430519615278/Logo01.png">
+	<img class="banner-top-right" src="/static/images/awinglg.png">
+</div></div>
+<script>
+    $("#layoutHeader").load('/static/Files/layout/5197905656409960384/4857469430519615278/Header.html');
+</script>
+    <div class="popup-container awing-popup" style="display: block;">    <script>
+        var customer = {"MacAddress":"A0-78-17-A6-84-9A","Name":null,"Phone":null,"Gender":false,"Birthday":{"Seconds":1009818000,"Nanos":0},"Email":null,"Device":{"DeviceName":"Macintosh","BrandName":null,"DeviceCode":null,"Os":"Intel Mac OS X 10_15_7","OsValue":null,"Language":"en-US"},"CreatedDate":{"Seconds":1645524669,"Nanos":143000000},"LastReminderDate":null,"ReminderCount":0};
+        renderContentCampaign(customer);
+    </script>
+</div>
+    <div id="agreement-container" class="awing-popup" style="display:none"></div>
+    <div class="loginpage-container">
+        <div id="wa_loading" class="wa-disable"><div class="loading-header"><span>Powered by <b>AWING</b></span></div><div class="linear-activity"><div class="determinate" style="width: 100%; animation-play-state: running;"></div></div></div>
+        <form name="extreme" id="frmLogin" action="http://172.19.176.3:880/cgi-bin/hslogin.cgi" method="POST" style="display: none;">
+    <input name="f_flex" id="f_flex" type="hidden">
+    <input name="f_flex_type" id="f_flex_type" type="hidden" value="log">
+    <input name="f_hs_server" id="f_hs_server" type="hidden" value="172.19.176.3">
+    <input name="f_Qv" id="f_Qv" type="hidden" value="it_qpmjdz=Dbqujwf.Ijhimboet@bbb_qpmjdz=@dmjfou_njou=5781:::35@dmjfou_nbd=B1.89.28.B7.95.:B@ttje=Ijhimboet!Dpggff@bq_nbd=C9.61.12.E8.72.25">
+</form>
+<script>
+    // set params from URL to form
+    var hs_server = "NONE";
+    var port = 880;
+    var postToUrl = "/cgi-bin/hslogin.cgi";
+    hs_server = getQueryVariable("hs_server");
+    Qv = getQueryVariable("Qv");
+    postToUrl = ":" + port + postToUrl;
+    document.getElementById("f_hs_server").value = hs_server;
+    document.getElementById("f_Qv").value = Qv;
+    document.getElementById("frmLogin").action = "http://" + hs_server + postToUrl;
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split(/[?&]/);
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                if (pair[0] == "Qv") {
+                    return vars[i].substr(3, vars[i].length);
+                }
+                return pair[1]; 
+            }
+        }
+        return "";
+    }  
+    function doPostForm() {
+        // Xác thực ngầm theo kiểu iframe
+        login();
+    }
+</script>
+
+
+
+
+<script>
+    if (isIEBrower()) {
+        var url = '/UnsupportedBrowser';
+        window.location.replace(url);
+    }
+    if (!checkCookieEnabled()) {
+        var url = '/FailCookie';
+        window.location.replace(url);
+    }
+    console.log("start load login page");
+    displayLoadingMessage('lgn');
+    // Đặt cờ khi animation stop
+    addCompleteAnimationEvent(function () {
+        layoutAnimationLoadingFlag = LAYOUT_ANIMATION_STATE.END;
+    });
+    var interval_obj = setInterval(function () {
+        /*  Nếu đã kết thúc loading và campaign đã load xong thì thực hiện các hành động
+            - Ẩn layout loading
+            - Hiển thị view đầu tiền
+            - Chạy animation của view
+        */
+        if (isCampaignLoadedAndAnimationEnd()) {
+            endLayoutLoadingAnimation();
+            console.log("End running animation");
+            startView();
+            console.log("Start view");
+            startViewAnimation();
+            clearInterval(interval_obj);
+            console.log("layoutAnimationLoadingFlag: " + layoutAnimationLoadingFlag + "; campaignLoadingFlag: " + campaignLoadingFlag);
+        }
+    }, 100); 
+
+    campaignData = {
+        preview: 0,
+        placeId: "5380104237319274278",
+        domainId: "4857469430519615278",
+        clientMac: "A0-78-17-A6-84-9A",
+        apMac: "B8-50-01-D7-61-14",
+        sessionId: "0e9a1710-e3cd-48be-a8a0-cc85afaa17f6"
+    };
+    console.log("check internet connected.");
+    var checkInternetLink = "http://awifi.vn/Picture/1x1pixel.png";
+    var isCheckInternet = 'True';
+    if (checkInternetLink && isCheckInternet.toLowerCase() === "true")
+        $.ajax({
+            url: checkInternetLink + '?t=' + Date.now(),
+            complete: function (xhr, textStatus) {
+                console.log("xhr status: " + xhr.status);
+                if (xhr.status === 200)
+                    window.location.href = "/Connected";                
+                else
+                    loadCustomer();
+            },
+            timeout: 100 //in milliseconds
+        });
+    else
+        loadCustomer();
+
+    function loadCustomer() {
+        let checkIOS14 = 'true' === 'true';
+        let deviceInfo = detectDeviceInfo();
+        $.ajax({
+            url: '/Content/ContentCustomer',
+            type: 'POST',
+            data: {
+                    macAddress: 'A0-78-17-A6-84-9A',
+                    placeCustomerInfoCollections: [{"Id":6742,"PlaceId":5380104237319274278,"PlaceName":"HC_HCM - Vuon Lai (EX) ","PlaceDirectoryPath":".0.90.4857469430519615278.5717395770880320337.4618389280435639985.5380104237319274278.","Field":"Birthday","TimeReminder":0},{"Id":6743,"PlaceId":5380104237319274278,"PlaceName":"HC_HCM - Vuon Lai (EX) ","PlaceDirectoryPath":".0.90.4857469430519615278.5717395770880320337.4618389280435639985.5380104237319274278.","Field":"Gender","TimeReminder":0}],
+                    deviceInfo: deviceInfo,
+                    checkIOS14: checkIOS14
+                },
+            timeout: 2000,
+            success: function (result) {
+                console.log("load ads customer success.");
+                changeLoadingAnimationState("paused");
+                $(".popup-container").html(result);
+                $(".popup-container").css("display", "block");
+                console.log("Show customer collection popup");
+            },
+            error: function (result) {
+                console.log("load customer error.");
+                renderContentCampaign({
+                    macAddress: 'A0-78-17-A6-84-9A',
+                    device: deviceInfo
+                });
+            }
+        });
+    }
+    function renderContentCampaign(customer) {
+        console.log("start render content campaign.");
+        changeLoadingAnimationState("running");
+        $.post('/Content/ContentCampaign',
+            {
+                sessionId: "0e9a1710-e3cd-48be-a8a0-cc85afaa17f6",
+                placeId: '5380104237319274278',
+                domainId: '4857469430519615278',
+                customer: customer
+            })
+            .done(function (result) {
+                $(".loginpage-container").append(result);
+                $(".loginpage-container").append('<div style="clear: both"></div>');
+                startLoadingCampaign();
+            });
+    }
+</script>
+        <div style="clear: both"></div>
+    <div id="htmlcommon"></div>
+<div id="htmlscreen" class="animation"><style>
+.wifi-logo { width: 85%; }
+.wa-button-horizontal-logo, .accept-terms { cursor: pointer; }
+.wa-button-horizontal-logo { min-height: 45px; font-size: 13px !important; margin-top: 5px; }
+.wa-accept-connection-terms { height: 60px; margin-top: -5px; }
+.logo-connection-terms { height: auto !important; box-sizing: border-box; margin-top: 0; padding-bottom: 0 !important;}
+.logo-connection-terms .accept-terms { margin-bottom: 0; }
+.awing-agreement { text-decoration: underline !important; cursor: pointer; }
+.adsbyawing { text-align: center; color: #5f6368; margin-top: 25px; font-weight: bold; }
+.adsbyawing label{ text-decoration: underline !important; font-size: 0.8em; cursor: pointer;}
+.content {padding: 40px 3%;}
+.icon-info { display: inline-block; width: 15px; height: 15px; cursor: pointer; margin-left: -1px; }
+.tooltip-container { display: inline-block; }
+.tooltip.show { opacity: 1; font-family: inherit; }
+@media (min-width:1024px){ .accept-terms{ font-size: 0.8em; } }
+@media (max-width:414px){ .content {padding: 25px 3%;} .adsbyawing { margin-top: 12.5px; } .adsbyawing img{ margin-top:4px; }}
+@media (max-width:375px){ .wa-button-horizontal-logo { font-size: 12px !important; } .accept-terms{ font-size: 0.6em; } }
+@media (max-width:360px){ .wa-button-horizontal-logo { font-size: 12px !important; } .accept-terms{ font-size: 0.6em; } }
+@media (max-width:320px) { .wa-button-horizontal-logo { height: 35px; font-size: 10px !important; margin-top: 2px; } .accept-terms{ font-size: 0.5em; }}
+@media screen and (orientation: landscape) and (max-width: 896px) { .wa-button-horizontal-logo { font-size: 10px !important; } .accept-terms{ font-size: 0.6em; } }
+@media screen and (orientation: landscape) and (max-width: 736px) { .wa-button-horizontal-logo { font-size: 9px !important; } .accept-terms{ font-size: 0.5em; } }
+#logo-tooltip { position: absolute;z-index: 120;text-shadow: none;text-transform: none;letter-spacing: normal;word-break: normal;word-spacing: normal;white-space: normal;line-break: auto;will-change: transform;font-family: inherit;line-height: 1.5;background: #D6D6D6;border-radius: 3px;box-shadow: 0 0px 3px rgba(0,0,0,0.2);font-style: italic;font-weight: bold;font-size: 12px;text-decoration: none;color: #000;padding: 5px 10px;text-align: left;}
+#logo-tooltip:after {width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 10px solid #d6d6d6;content: "";position: absolute;left: calc(50% + 56px);bottom: -10px;margin-left: -10px;}
+#logo-tooltip.top:after {border-top-color: transparent;border-bottom: 10px solid #d6d6d6;top: -17px;bottom: auto;}
+</style>
+<div class="content">
+  <div id="wifi_free" class="wifi-free">
+    <span>Wi-Fi miễn phí tài trợ bởi</span> </div>
+  <div id="wifi_logo" class="wifi-logo">
+    <img src="/static/Files/lgn/4670151519760859035/Logo.png" alt="">
+  </div>
+  <div class="wa-accept-connection-terms logo-connection-terms">
+    <button id="acceptconnection" class="accept-connection wa-button wa-button-horizontal-logo" onclick="onclickBtnConnect()" style="background-color: rgb(18, 60, 137); color: rgb(255, 255, 255);">TIẾP TỤC ĐỂ KẾT NỐI INTERNET <br> (INTERNET ACCESS)</button>
+    <div id="wa_accept_terms" class="accept-terms">Tôi đồng ý các điều khoản sử dụng Wi-Fi <a class="awing-agreement" onclick="onClickshowAgreement()">tại đây</a></div>
+  </div>
+</div>
+<div id="logo-adsbyawing" class="adsbyawing">
+  <div class="tooltip-container" onclick="toogleContactTooltip()">
+    <label>Ads by AWING</label>
+    <a class="awing-info" data-toggle="tooltip" title="Email: contact@awing.vn<br/>Hotline: 0901 05 05 17">
+      <span class="icon-info"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29.51 29.51" style="enable-background:new 0 0 29.51 29.51;" xml:space="preserve"><style type="text/css">.st0{fill:#F5F5F5;}.st1{fill:#FFFFFF;}.st2{fill:none;stroke:#5f6368;stroke-width:2;stroke-miterlimit:10;}.st3{fill:#D1D1D1;}.st4{opacity:0.15;fill:#292929;enable-background:new;}.st5{fill:#D0352E;}.st6{fill:#F2F2F7;}.st7{fill:#5f6368;}.st8{opacity:0.15;enable-background:new;}.st9{fill:#292929;}.st10{fill:#CF352D;}.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#F5F5F5;}.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#CF352D;}.st14{fill:#1A1A18;}.st15{fill:#919194;}.st16{fill:#F0F0F0;}.st17{fill:#515151;}.st18{fill:#E2000F;}.st19{fill:none;stroke:#1A1A18;stroke-miterlimit:10;}.st20{fill:none;stroke:#1A1A18;stroke-miterlimit:10;stroke-dasharray:11.7512,11.7512;}</style><circle class="st2" cx="14.75" cy="14.75" r="13.75"></circle>
+      <g><g><path class="st7" d="M14.47,24.01c-0.89,0-1.58-0.23-2.04-0.68c-0.47-0.45-0.7-1.1-0.7-1.93c0-0.42,0.05-0.84,0.13-1.25l1.82-8.84
+            h2.96l-1.66,7.87c-0.17,0.81-0.26,1.34-0.26,1.57c0,0.62,0.35,0.93,1.06,0.93c0.41,0,0.78-0.07,1.11-0.2l-0.46,2.24
+            C15.73,23.91,15.08,24.01,14.47,24.01z M17.78,7.07c0,0.49-0.18,0.89-0.52,1.21c-0.35,0.32-0.78,0.48-1.28,0.48
+            c-0.49,0-0.9-0.15-1.24-0.44c-0.34-0.29-0.51-0.68-0.51-1.16c0-0.5,0.18-0.9,0.54-1.21c0.36-0.31,0.79-0.46,1.29-0.46
+            c0.47,0,0.88,0.15,1.21,0.45C17.62,6.24,17.78,6.62,17.78,7.07z"></path></g></g></svg>
+      </span>
+    </a>
+  </div>
+</div>
+<script type="text/javascript">
+var logoBtnBackground = "#123c89";
+var logoBtnTextColor = "#ffffff";
+$('.logo-connection-terms .wa-button').css({ "background-color": logoBtnBackground, "color": logoBtnTextColor, })
+function onClickshowAgreement() { remove_tooltip(); showAgreement(); }
+function onclickBtnConnect() { remove_tooltip(); window.onresize = null; nextView(); }
+function startAnimation_view0() { window.onresize = function() { if($('#logo-tooltip').length > 0) { toogleContactTooltip(); toogleContactTooltip(); }}; }
+function toogleContactTooltip() {
+  var target = $('.awing-info'), tip = target.attr("title"), tooltip = $('<div id="logo-tooltip" class="tooltip-inner"></div>');
+  if ($('#logo-tooltip').length > 0) {
+    remove_tooltip();
+    return false;
+  }
+  tooltip.css("opacity", 0).html(tip).appendTo("#logo-adsbyawing");
+  if ($(window).width() < tooltip.outerWidth() * 1.5)
+    tooltip.css("max-width", $(window).width() / 2);
+  else tooltip.css("max-width", 340);
+  var pos_left = target.offset().left + target.outerWidth() / 2 - tooltip.outerWidth() / 2;
+  var pos_top = target.offset().top + target.outerHeight();
+  tooltip.addClass("top");
+  tooltip.css({ left: pos_left - 57, top: pos_top + 8, opacity: 1 });
+};
+function remove_tooltip() {
+  $('#logo-tooltip').remove();
+};
+</script></div>
+<div id="htmlscreen_nextview" class="wa-disable"><style>
+img#banner {margin-top: 0; width: 100%;}
+.banner-container {
+  border-radius: 3px;
+}
+.wa-button,#banner{cursor: pointer;}
+.wa-button {
+  height: 45px;
+  font-size: 14px;
+}
+.wa-accept-connection-terms {
+  height: 60px;
+}
+.wa-hotline {
+  background: #f5f5f5;
+}
+.wa-button-banner-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  display: none;
+}
+.wa-button-default .wa-button-banner-icon {
+  display: block;
+}
+.awing_continue_scroll_2 {
+  position: fixed;
+  bottom: 20px;
+  z-index: 9;
+  width: 34px;
+  -webkit-animation: sdb06 2s infinite;
+  animation: sdb06 2s infinite;
+  right: 27%;
+  transition: .5s;
+  -webkit-transition: .5s;
+}
+.st0{stroke:#000000;stroke-width:16;stroke-miterlimit:10;}
+@-webkit-keyframes sdb06 {
+  0% {-webkit-transform: translate(0, 0);opacity: 0;}
+  50% {opacity: 1;}
+  100% {-webkit-transform: translate(0, 20px);opacity: 0;}
+}
+@keyframes sdb06 {
+  0% {transform: translate(0, 0);opacity: 0;}
+  50% {opacity: 1;}
+  100% {transform: translate(0, 20px);opacity: 0;}
+}
+@media (min-width:960px){
+  .wa-button { margin-top: 10px;}
+}
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .loginpage-container { padding-bottom: 32px; }
+} */
+@media (max-width: 1024px) {
+  .loginpage-container { padding-bottom: 32px; }
+}
+@media (max-width: 800px){
+  .wa-button-maxview{width: 80%;}
+  .wa-button-maxview-continue{width: 67%;}
+  .loginpage-container { padding-bottom: 32px; }
+  .awing_continue_scroll_2 {right: 0px}
+  @media (max-aspect-ratio:5/8){
+    .banner-container{
+      position:absolute;
+      width:100vw;
+      min-height:147vw;
+      top:0;
+      bottom:32.4px;
+    }
+  }
+}
+@media (max-width:426px){ 
+  .awing_continue_scroll_2 {right: 18px}
+  .banner-container {
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+  }
+  .loginpage-container {
+    padding-bottom: 32px;
+  }
+  .wa-accept-connection-terms {
+    margin-top: -5px;
+    padding-bottom: 20px;
+  }
+  .wa-hotline {
+    margin: 0;
+  }
+  .awing_continue_scroll_2 {
+    /* right: 18px; */
+    width: 28px;
+  }
+}
+@media (max-width:375px) {
+  .wa-button { font-size: 12px !important; }
+}
+@media (max-width:320px) {
+  .wa-button {
+    height: 35px;
+    font-size: 10px !important;
+    margin-top: 2px;
+  }
+}
+@media only screen and (orientation : landscape) {
+  .banner-container {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: auto !important;
+  }
+  .wa-button-maxview { font-size: 14px !important; }
+  .awing_continue_scroll_2 .st0{ stroke: #000000 !important}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) { .awing_continue_scroll_2 { right: 18px !important;} }
+@media only screen and (min-device-width:800px) and (max-device-width:1366px) and (orientation:portrait){.awing_continue_scroll_2{right:18px}}
+@media (max-width:970px) and (min-width:800px){.awing_continue_scroll_2{right:18px}}
+</style>
+<div class="banner-container" style="width: 100%; background: rgb(255, 255, 255);"><img id="banner" onclick="nextView()" src="/static/Files/lgn/4670151519760859035/Banner-600x860.jpg">
+  <div class="wa-accept-connection-terms"><button id="acceptconnection_BannerOverflow" onclick="nextView()" class="wa-button wa-button-maxview" style="background-color: rgb(32, 58, 120); color: rgb(255, 255, 255);"><div class="wa-button-icon wa-button-banner-icon"><svg class="btn-arrow-right-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.79 84.79"><defs><style>.cls-1,.cls-2{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}.cls-2{fill-rule:evenodd;}</style></defs><title>Mui ten button</title><circle class="cls-1" cx="42.4" cy="42.4" r="40.9"></circle><polyline class="cls-2" points="34.5 23.54 53.36 42.4 34.5 61.26"></polyline></svg></div><span>KẾT NỐI INTERNET<br> (INTERNET ACCESS)</span></button></div>
+</div>
+<div class="awing_continue_scroll_2" style="display: none;">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+  <path class="st0" d="M156.8,207.6l127.5-104.2c3.5-2.9,3.5-7.6,0-10.5c-3.5-2.9-9.4-2.9-12.9,0l-121.1,99l-121-99 c-3.5-2.9-9.4-2.9-12.9,0c-1.8,1.5-2.7,3.4-2.7,5.3s0.9,3.8,2.7,5.3l127.5,104.2C147.5,210.6,153.3,210.6,156.8,207.6z"></path>
+</svg>
+</div>
+<script>
+var colorCodeDefaultButtonConnect ="#ffffff";
+var colorCodeDefaultTextButtonConnect ="#231f20";
+var colorCodeBody ="#"+"ffffff";
+var colorCodeButtonConnect = "203A78" ? "#203A78" : colorCodeDefaultButtonConnect;
+var colorCodeTextButtonConnect = "ffffff" ? "#ffffff" : colorCodeDefaultTextButtonConnect;
+var mInfo = detectDeviceInfo();
+var windowheight = window.innerHeight;
+if(colorCodeButtonConnect === colorCodeDefaultButtonConnect && colorCodeTextButtonConnect === colorCodeDefaultTextButtonConnect) {
+  $('#acceptconnection_BannerOverflow').addClass('wa-button-default');
+}
+else {
+  $('.wa-button-maxview').css({ "background-color": colorCodeButtonConnect, "color": colorCodeTextButtonConnect });
+}
+if(mInfo.os == "iOS" || mInfo.os == "Android") {
+    $('.awing_continue_scroll_2 .st0').css('stroke', colorCodeButtonConnect);
+  }
+$('.banner-container').css('background', colorCodeBody);
+function startAnimation_view1() {
+  $("#layoutHeader").hide();
+  $('.banner-container').css('background', colorCodeBody);
+  continueScrollHandle($("#wa_hotline")[0], $('.awing_continue_scroll_2'));
+  $(window).scroll(function() { continueScrollHandle($("#wa_hotline")[0], $('.awing_continue_scroll_2')); });
+  // var mql = window.matchMedia('(orientation: landscape)');
+  // function screenLandscape(e) {
+  //   if (e.matches) {
+  //     $('#acceptconnection_BannerOverflow').addClass('wa-button-default');
+  //   } else {
+  //     if(colorCodeButtonConnect !== colorCodeDefaultButtonConnect || colorCodeTextButtonConnect !== colorCodeDefaultTextButtonConnect) {
+  //       $('#acceptconnection_BannerOverflow').removeClass('wa-button-default');
+  //       $('.wa-button-maxview').css({ "background-color": colorCodeButtonConnect, "color": colorCodeTextButtonConnect });
+  //       $('.awing_continue_text').css('color', colorCodeButtonConnect);
+  //       $('.awing_continue_text span').css({ "border-left": "5px solid " + colorCodeButtonConnect, "border-bottom": "5px solid " + colorCodeButtonConnect });
+  //     }
+  //   }
+  // }
+  // mql.addListener(screenLandscape);
+  // screenLandscape(mql);
+  // $(".awing_continue_scroll").css("right", "");
+  if(mInfo.os == "iOS" || mInfo.os == "Android"){
+    if(windowheight < 700) { $("#acceptconnection_BannerOverflow").addClass("wa-button-maxview-continue"); }
+    // $('.banner-container').css('background', colorCodeBody);
+    $(window).resize(function() { continueScrollHandle($("#wa_hotline")[0], $('.awing_continue_scroll_2')); });
+  }
+  else {
+    function setContinuePC() {
+      var rightContinue = ($(window).width() - $("#banner").width())/2 - $(".awing_continue_scroll_2").width();
+      $(".awing_continue_scroll_2").css('right', rightContinue - 10);
+    }
+    $(window).resize(function() { setContinuePC() });
+    setTimeout(function() { setContinuePC() }, 200);
+  }
+}
+function continueScrollHandle(elm, scroll){
+  if(checkVisible(elm)) { scroll.hide(); }
+  else { scroll.show();}
+}
+function checkVisible(elm) {
+  var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+  if(elm != "" && elm != undefined){
+      var rect = elm.getBoundingClientRect();
+      return !(rect.bottom == 0 || rect.top - viewHeight >= -15);
+  } else {
+      return true;
+  }
+}
+</script></div>
+<div id="iOS-11-display" style="display:none">
+    <style>
+        .pointer-border {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #f3f9ef;
+            float: right;
+            width: 44.4%;
+            padding-top: 44.4%;
+            border-bottom-left-radius: 100%;
+            z-index: -100;
+        }
+
+        .pointer-in {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #9acb60;
+            float: right;
+            width: 75%;
+            padding-top: 75%;
+            border-bottom-left-radius: 100%;
+        }
+
+        #guide-box {
+            margin-top: 7%;
+            flex: 1;
+        }
+
+        #hotline {
+            display: block;
+            vertical-align: middle;
+            border-top: 2px solid #eeeeee;
+            padding: 8px 2%;
+            margin-top: 35px;
+            position: absolute;
+            bottom: 0;
+            width: 96%;
+        }
+
+        img.emoji {
+            width: 19px;
+            height: 19px;
+            vertical-align: middle;
+        }
+
+        img.pointer {
+            position: absolute;
+            top: 20%;
+            right: 20%;
+            float: right;
+            width: 25%;
+            animation: pointAnimate;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            -webkit-animation: pointAnimate;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-fill-mode: forwards;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation: pointAnimate;
+            -moz-animation-duration: 1s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+        }
+
+        @keyframes pointAnimate {
+            0% {
+                transform: translate3d(0,10px,0);
+            }
+
+            50% {
+                transform: translate3d(0,0,0);
+            }
+
+            100% {
+                transform: translate3d(0,-10px,0);
+            }
+        }
+    </style>
+    <div class="pointer-border">
+        <div class="pointer-in">
+            <img src="/static/images/pointer.png" alt="pointer" class="pointer">
+        </div>
+    </div>
+    <img src="/static/images/done.png" alt="Done" style="display: block;margin: 0 auto;width:30%;">
+    <h3 style="text-align: center;color: green;">Kết nối Internet thành công!</h3>
+    <h3 style="text-align: center;color: green;">Nhấn "Xong" để tiếp tục.</h3>
+    <h3 style="text-align: center;color: green;">(Connected! Click "Done" to continue)</h3>
+</div>
+<script>
+    campaignData.campaignId = "5529506658088987206"; 
+    postViewData(campaignData.sessionId);
+</script>
+
+        <script>
+        loginData = {"CommonHtml":"","PageViews":[{"ContentHtml":"&lt;style&gt;\r\n.wifi-logo { width: 85%; }\r\n.wa-button-horizontal-logo, .accept-terms { cursor: pointer; }\r\n.wa-button-horizontal-logo { min-height: 45px; font-size: 13px !important; margin-top: 5px; }\r\n.wa-accept-connection-terms { height: 60px; margin-top: -5px; }\r\n.logo-connection-terms { height: auto !important; box-sizing: border-box; margin-top: 0; padding-bottom: 0 !important;}\r\n.logo-connection-terms .accept-terms { margin-bottom: 0; }\r\n.awing-agreement { text-decoration: underline !important; cursor: pointer; }\r\n.adsbyawing { text-align: center; color: #5f6368; margin-top: 25px; font-weight: bold; }\r\n.adsbyawing label{ text-decoration: underline !important; font-size: 0.8em; cursor: pointer;}\r\n.content {padding: 40px 3%;}\r\n.icon-info { display: inline-block; width: 15px; height: 15px; cursor: pointer; margin-left: -1px; }\r\n.tooltip-container { display: inline-block; }\r\n.tooltip.show { opacity: 1; font-family: inherit; }\r\n@media (min-width:1024px){ .accept-terms{ font-size: 0.8em; } }\r\n@media (max-width:414px){ .content {padding: 25px 3%;} .adsbyawing { margin-top: 12.5px; } .adsbyawing img{ margin-top:4px; }}\r\n@media (max-width:375px){ .wa-button-horizontal-logo { font-size: 12px !important; } .accept-terms{ font-size: 0.6em; } }\r\n@media (max-width:360px){ .wa-button-horizontal-logo { font-size: 12px !important; } .accept-terms{ font-size: 0.6em; } }\r\n@media (max-width:320px) { .wa-button-horizontal-logo { height: 35px; font-size: 10px !important; margin-top: 2px; } .accept-terms{ font-size: 0.5em; }}\r\n@media screen and (orientation: landscape) and (max-width: 896px) { .wa-button-horizontal-logo { font-size: 10px !important; } .accept-terms{ font-size: 0.6em; } }\r\n@media screen and (orientation: landscape) and (max-width: 736px) { .wa-button-horizontal-logo { font-size: 9px !important; } .accept-terms{ font-size: 0.5em; } }\r\n#logo-tooltip { position: absolute;z-index: 120;text-shadow: none;text-transform: none;letter-spacing: normal;word-break: normal;word-spacing: normal;white-space: normal;line-break: auto;will-change: transform;font-family: inherit;line-height: 1.5;background: #D6D6D6;border-radius: 3px;box-shadow: 0 0px 3px rgba(0,0,0,0.2);font-style: italic;font-weight: bold;font-size: 12px;text-decoration: none;color: #000;padding: 5px 10px;text-align: left;}\r\n#logo-tooltip:after {width: 0;height: 0;border-left: 10px solid transparent;border-right: 10px solid transparent;border-top: 10px solid #d6d6d6;content: \"\";position: absolute;left: calc(50% + 56px);bottom: -10px;margin-left: -10px;}\r\n#logo-tooltip.top:after {border-top-color: transparent;border-bottom: 10px solid #d6d6d6;top: -17px;bottom: auto;}\r\n&lt;/style&gt;\r\n&lt;div class=\"content\"&gt;\r\n  &lt;div id=\"wifi_free\" class=\"wifi-free\"&gt;\r\n    &lt;span&gt;Wi-Fi miễn phí tài trợ bởi&lt;/span&gt; &lt;/div&gt;\r\n  &lt;div id=\"wifi_logo\" class=\"wifi-logo\"&gt;\r\n    &lt;img src=\"/static/Files/lgn/4670151519760859035/Logo.png\" alt=\"\" /&gt;\r\n  &lt;/div&gt;\r\n  &lt;div class=\"wa-accept-connection-terms logo-connection-terms\"&gt;\r\n    &lt;button id=\"acceptconnection\" class=\"accept-connection wa-button wa-button-horizontal-logo\" onclick=\"onclickBtnConnect()\" &gt;TIẾP TỤC ĐỂ KẾT NỐI INTERNET &lt;BR/&gt; (INTERNET ACCESS)&lt;/button&gt;\r\n    &lt;div id=\"wa_accept_terms\" class=\"accept-terms\"&gt;Tôi đồng ý các điều khoản sử dụng Wi-Fi &lt;a class=\"awing-agreement\" onclick=\"onClickshowAgreement()\"&gt;tại đây&lt;/a&gt;&lt;/div&gt;\r\n  &lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;div id=\"logo-adsbyawing\" class=\"adsbyawing\"&gt;\r\n  &lt;div class=\"tooltip-container\" onclick=\"toogleContactTooltip()\"&gt;\r\n    &lt;label&gt;Ads by AWING&lt;/label&gt;\r\n    &lt;a class=\"awing-info\" data-toggle=\"tooltip\" title='Email: contact@awing.vn&lt;br/&gt;Hotline: 0901 05 05 17'&gt;\r\n      &lt;span class=\"icon-info\"&gt;&lt;svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 29.51 29.51\" style=\"enable-background:new 0 0 29.51 29.51;\" xml:space=\"preserve\"&gt;&lt;style type=\"text/css\"&gt;.st0{fill:#F5F5F5;}.st1{fill:#FFFFFF;}.st2{fill:none;stroke:#5f6368;stroke-width:2;stroke-miterlimit:10;}.st3{fill:#D1D1D1;}.st4{opacity:0.15;fill:#292929;enable-background:new;}.st5{fill:#D0352E;}.st6{fill:#F2F2F7;}.st7{fill:#5f6368;}.st8{opacity:0.15;enable-background:new;}.st9{fill:#292929;}.st10{fill:#CF352D;}.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#F5F5F5;}.st12{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}.st13{fill-rule:evenodd;clip-rule:evenodd;fill:#CF352D;}.st14{fill:#1A1A18;}.st15{fill:#919194;}.st16{fill:#F0F0F0;}.st17{fill:#515151;}.st18{fill:#E2000F;}.st19{fill:none;stroke:#1A1A18;stroke-miterlimit:10;}.st20{fill:none;stroke:#1A1A18;stroke-miterlimit:10;stroke-dasharray:11.7512,11.7512;}&lt;/style&gt;&lt;circle class=\"st2\" cx=\"14.75\" cy=\"14.75\" r=\"13.75\"/&gt;\r\n      &lt;g&gt;&lt;g&gt;&lt;path class=\"st7\" d=\"M14.47,24.01c-0.89,0-1.58-0.23-2.04-0.68c-0.47-0.45-0.7-1.1-0.7-1.93c0-0.42,0.05-0.84,0.13-1.25l1.82-8.84\r\n            h2.96l-1.66,7.87c-0.17,0.81-0.26,1.34-0.26,1.57c0,0.62,0.35,0.93,1.06,0.93c0.41,0,0.78-0.07,1.11-0.2l-0.46,2.24\r\n            C15.73,23.91,15.08,24.01,14.47,24.01z M17.78,7.07c0,0.49-0.18,0.89-0.52,1.21c-0.35,0.32-0.78,0.48-1.28,0.48\r\n            c-0.49,0-0.9-0.15-1.24-0.44c-0.34-0.29-0.51-0.68-0.51-1.16c0-0.5,0.18-0.9,0.54-1.21c0.36-0.31,0.79-0.46,1.29-0.46\r\n            c0.47,0,0.88,0.15,1.21,0.45C17.62,6.24,17.78,6.62,17.78,7.07z\"/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;\r\n      &lt;/span&gt;\r\n    &lt;/a&gt;\r\n  &lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;script type=\"text/javascript\"&gt;\r\nvar logoBtnBackground = \"#123c89\";\r\nvar logoBtnTextColor = \"#ffffff\";\r\n$('.logo-connection-terms .wa-button').css({ \"background-color\": logoBtnBackground, \"color\": logoBtnTextColor, })\r\nfunction onClickshowAgreement() { remove_tooltip(); showAgreement(); }\r\nfunction onclickBtnConnect() { remove_tooltip(); window.onresize = null; nextView(); }\r\nfunction startAnimation() { window.onresize = function() { if($('#logo-tooltip').length &gt; 0) { toogleContactTooltip(); toogleContactTooltip(); }}; }\r\nfunction toogleContactTooltip() {\r\n  var target = $('.awing-info'), tip = target.attr(\"title\"), tooltip = $('&lt;div id=\"logo-tooltip\" class=\"tooltip-inner\"&gt;&lt;/div&gt;');\r\n  if ($('#logo-tooltip').length &gt; 0) {\r\n    remove_tooltip();\r\n    return false;\r\n  }\r\n  tooltip.css(\"opacity\", 0).html(tip).appendTo(\"#logo-adsbyawing\");\r\n  if ($(window).width() &lt; tooltip.outerWidth() * 1.5)\r\n    tooltip.css(\"max-width\", $(window).width() / 2);\r\n  else tooltip.css(\"max-width\", 340);\r\n  var pos_left = target.offset().left + target.outerWidth() / 2 - tooltip.outerWidth() / 2;\r\n  var pos_top = target.offset().top + target.outerHeight();\r\n  tooltip.addClass(\"top\");\r\n  tooltip.css({ left: pos_left - 57, top: pos_top + 8, opacity: 1 });\r\n};\r\nfunction remove_tooltip() {\r\n  $('#logo-tooltip').remove();\r\n};\r\n&lt;/script&gt;"},{"ContentHtml":"&lt;style&gt;\r\nimg#banner {margin-top: 0; width: 100%;}\r\n.banner-container {\r\n  border-radius: 3px;\r\n}\r\n.wa-button,#banner{cursor: pointer;}\r\n.wa-button {\r\n  height: 45px;\r\n  font-size: 14px;\r\n}\r\n.wa-accept-connection-terms {\r\n  height: 60px;\r\n}\r\n.wa-hotline {\r\n  background: #f5f5f5;\r\n}\r\n.wa-button-banner-icon {\r\n  position: absolute;\r\n  width: 32px;\r\n  height: 32px;\r\n  display: none;\r\n}\r\n.wa-button-default .wa-button-banner-icon {\r\n  display: block;\r\n}\r\n.awing_continue_scroll_2 {\r\n  position: fixed;\r\n  bottom: 20px;\r\n  z-index: 9;\r\n  width: 34px;\r\n  -webkit-animation: sdb06 2s infinite;\r\n  animation: sdb06 2s infinite;\r\n  right: 27%;\r\n  transition: .5s;\r\n  -webkit-transition: .5s;\r\n}\r\n.st0{stroke:#000000;stroke-width:16;stroke-miterlimit:10;}\r\n@-webkit-keyframes sdb06 {\r\n  0% {-webkit-transform: translate(0, 0);opacity: 0;}\r\n  50% {opacity: 1;}\r\n  100% {-webkit-transform: translate(0, 20px);opacity: 0;}\r\n}\r\n@keyframes sdb06 {\r\n  0% {transform: translate(0, 0);opacity: 0;}\r\n  50% {opacity: 1;}\r\n  100% {transform: translate(0, 20px);opacity: 0;}\r\n}\r\n@media (min-width:960px){\r\n  .wa-button { margin-top: 10px;}\r\n}\r\n/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\r\n  .loginpage-container { padding-bottom: 32px; }\r\n} */\r\n@media (max-width: 1024px) {\r\n  .loginpage-container { padding-bottom: 32px; }\r\n}\r\n@media (max-width: 800px){\r\n  .wa-button-maxview{width: 80%;}\r\n  .wa-button-maxview-continue{width: 67%;}\r\n  .loginpage-container { padding-bottom: 32px; }\r\n  .awing_continue_scroll_2 {right: 0px}\r\n  @media (max-aspect-ratio:5/8){\r\n    .banner-container{\r\n      position:absolute;\r\n      width:100vw;\r\n      min-height:147vw;\r\n      top:0;\r\n      bottom:32.4px;\r\n    }\r\n  }\r\n}\r\n@media (max-width:426px){ \r\n  .awing_continue_scroll_2 {right: 18px}\r\n  .banner-container {\r\n    margin: 0 auto !important;\r\n    border-radius: 0 !important;\r\n  }\r\n  .loginpage-container {\r\n    padding-bottom: 32px;\r\n  }\r\n  .wa-accept-connection-terms {\r\n    margin-top: -5px;\r\n    padding-bottom: 20px;\r\n  }\r\n  .wa-hotline {\r\n    margin: 0;\r\n  }\r\n  .awing_continue_scroll_2 {\r\n    /* right: 18px; */\r\n    width: 28px;\r\n  }\r\n}\r\n@media (max-width:375px) {\r\n  .wa-button { font-size: 12px !important; }\r\n}\r\n@media (max-width:320px) {\r\n  .wa-button {\r\n    height: 35px;\r\n    font-size: 10px !important;\r\n    margin-top: 2px;\r\n  }\r\n}\r\n@media only screen and (orientation : landscape) {\r\n  .banner-container {\r\n    max-width: 600px;\r\n    margin: 0 auto;\r\n    min-height: auto !important;\r\n  }\r\n  .wa-button-maxview { font-size: 14px !important; }\r\n  .awing_continue_scroll_2 .st0{ stroke: #000000 !important}\r\n}\r\n@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) { .awing_continue_scroll_2 { right: 18px !important;} }\r\n@media only screen and (min-device-width:800px) and (max-device-width:1366px) and (orientation:portrait){.awing_continue_scroll_2{right:18px}}\r\n@media (max-width:970px) and (min-width:800px){.awing_continue_scroll_2{right:18px}}\r\n&lt;/style&gt;\r\n&lt;div class=\"banner-container\" style=\"width:100%\"&gt;&lt;img id=\"banner\" onclick=\"nextView()\" src=\"/static/Files/lgn/4670151519760859035/Banner-600x860.jpg\" /&gt;\r\n  &lt;div class=\"wa-accept-connection-terms\"&gt;&lt;button id=\"acceptconnection_BannerOverflow\" onclick=\"nextView()\" class=\"wa-button wa-button-maxview\"&gt;&lt;div class=\"wa-button-icon wa-button-banner-icon\"&gt;&lt;svg class=\"btn-arrow-right-icon\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 84.79 84.79\"&gt;&lt;defs&gt;&lt;style&gt;.cls-1,.cls-2{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}.cls-2{fill-rule:evenodd;}&lt;/style&gt;&lt;/defs&gt;&lt;title&gt;Mui ten button&lt;/title&gt;&lt;circle class=\"cls-1\" cx=\"42.4\" cy=\"42.4\" r=\"40.9\"/&gt;&lt;polyline class=\"cls-2\" points=\"34.5 23.54 53.36 42.4 34.5 61.26\"/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;span&gt;KẾT NỐI INTERNET&lt;BR/&gt; (INTERNET ACCESS)&lt;/span&gt;&lt;/button&gt;&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;div class=\"awing_continue_scroll_2\" style=\"display: none;\"&gt;\r\n  &lt;svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 300 300\" style=\"enable-background:new 0 0 300 300;\" xml:space=\"preserve\"&gt;\r\n  &lt;path class=\"st0\" d=\"M156.8,207.6l127.5-104.2c3.5-2.9,3.5-7.6,0-10.5c-3.5-2.9-9.4-2.9-12.9,0l-121.1,99l-121-99 c-3.5-2.9-9.4-2.9-12.9,0c-1.8,1.5-2.7,3.4-2.7,5.3s0.9,3.8,2.7,5.3l127.5,104.2C147.5,210.6,153.3,210.6,156.8,207.6z\"/&gt;\r\n&lt;/svg&gt;\r\n&lt;/div&gt;\r\n&lt;script&gt;\r\nvar colorCodeDefaultButtonConnect =\"#ffffff\";\r\nvar colorCodeDefaultTextButtonConnect =\"#231f20\";\r\nvar colorCodeBody =\"#\"+\"ffffff\";\r\nvar colorCodeButtonConnect = \"203A78\" ? \"#203A78\" : colorCodeDefaultButtonConnect;\r\nvar colorCodeTextButtonConnect = \"ffffff\" ? \"#ffffff\" : colorCodeDefaultTextButtonConnect;\r\nvar mInfo = detectDeviceInfo();\r\nvar windowheight = window.innerHeight;\r\nif(colorCodeButtonConnect === colorCodeDefaultButtonConnect &amp;&amp; colorCodeTextButtonConnect === colorCodeDefaultTextButtonConnect) {\r\n  $('#acceptconnection_BannerOverflow').addClass('wa-button-default');\r\n}\r\nelse {\r\n  $('.wa-button-maxview').css({ \"background-color\": colorCodeButtonConnect, \"color\": colorCodeTextButtonConnect });\r\n}\r\nif(mInfo.os == \"iOS\" || mInfo.os == \"Android\") {\r\n    $('.awing_continue_scroll_2 .st0').css('stroke', colorCodeButtonConnect);\r\n  }\r\n$('.banner-container').css('background', colorCodeBody);\r\nfunction startAnimation() {\r\n  $(\"#layoutHeader\").hide();\r\n  $('.banner-container').css('background', colorCodeBody);\r\n  continueScrollHandle($(\"#wa_hotline\")[0], $('.awing_continue_scroll_2'));\r\n  $(window).scroll(function() { continueScrollHandle($(\"#wa_hotline\")[0], $('.awing_continue_scroll_2')); });\r\n  // var mql = window.matchMedia('(orientation: landscape)');\r\n  // function screenLandscape(e) {\r\n  //   if (e.matches) {\r\n  //     $('#acceptconnection_BannerOverflow').addClass('wa-button-default');\r\n  //   } else {\r\n  //     if(colorCodeButtonConnect !== colorCodeDefaultButtonConnect || colorCodeTextButtonConnect !== colorCodeDefaultTextButtonConnect) {\r\n  //       $('#acceptconnection_BannerOverflow').removeClass('wa-button-default');\r\n  //       $('.wa-button-maxview').css({ \"background-color\": colorCodeButtonConnect, \"color\": colorCodeTextButtonConnect });\r\n  //       $('.awing_continue_text').css('color', colorCodeButtonConnect);\r\n  //       $('.awing_continue_text span').css({ \"border-left\": \"5px solid \" + colorCodeButtonConnect, \"border-bottom\": \"5px solid \" + colorCodeButtonConnect });\r\n  //     }\r\n  //   }\r\n  // }\r\n  // mql.addListener(screenLandscape);\r\n  // screenLandscape(mql);\r\n  // $(\".awing_continue_scroll\").css(\"right\", \"\");\r\n  if(mInfo.os == \"iOS\" || mInfo.os == \"Android\"){\r\n    if(windowheight &lt; 700) { $(\"#acceptconnection_BannerOverflow\").addClass(\"wa-button-maxview-continue\"); }\r\n    // $('.banner-container').css('background', colorCodeBody);\r\n    $(window).resize(function() { continueScrollHandle($(\"#wa_hotline\")[0], $('.awing_continue_scroll_2')); });\r\n  }\r\n  else {\r\n    function setContinuePC() {\r\n      var rightContinue = ($(window).width() - $(\"#banner\").width())/2 - $(\".awing_continue_scroll_2\").width();\r\n      $(\".awing_continue_scroll_2\").css('right', rightContinue - 10);\r\n    }\r\n    $(window).resize(function() { setContinuePC() });\r\n    setTimeout(function() { setContinuePC() }, 200);\r\n  }\r\n}\r\nfunction continueScrollHandle(elm, scroll){\r\n  if(checkVisible(elm)) { scroll.hide(); }\r\n  else { scroll.show();}\r\n}\r\nfunction checkVisible(elm) {\r\n  var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);\r\n  if(elm != \"\" &amp;&amp; elm != undefined){\r\n      var rect = elm.getBoundingClientRect();\r\n      return !(rect.bottom == 0 || rect.top - viewHeight &gt;= -15);\r\n  } else {\r\n      return true;\r\n  }\r\n}\r\n&lt;/script&gt;"}]};
+        welcomeData = {"CommonHtml":"","PageViews":[{"ContentHtml":"&lt;a href=\"https://tenmien.vn/\" id=\"landingpage\"&gt;&lt;/a&gt;\r\n&lt;a href=\"https://tenmien.vn/\" id=\"landingpage1\"&gt;&lt;/a&gt;\r\n&lt;script&gt;\r\n  openLandingpageCNA(\"landingpage\",\"landingpage1\");\r\n function openLandingpageCNA(elementId,elementCNAId) {\r\n    var btn = document.getElementById(elementId);\r\n    var btnCNA = document.getElementById(elementCNAId);\r\n    var mInfo = detectDeviceInfo();\r\n    var mUserAgent = navigator.userAgent || navigator.vendor || window.opera;\r\n    if (mInfo.os === \"iOS\" &amp;&amp; !mUserAgent.match(/Safari/i)) {\r\n        if (mInfo.osValue &gt;= 120)\r\n        {\r\n            setTimeout(function () {\r\n               window.location.href = btnCNA.href;\r\n            }, 3000);\r\n            \r\n            btn.click();\r\n\r\n        } \r\n  \t\telse\r\n          btn.click();\r\n  \r\n    }\r\n    else // Tất cả trường hợp còn lại đêu giả lập click\r\n        btn.click();\r\n\r\n}\r\n  &lt;/script&gt;"}]};
+        renderPage(loginData);
+        </script>
+    <div style="clear: both"></div></div>
+    
+<div id="layoutFooter"><div id="wa_hotline" class="wa-hotline" style="font-size: 11px;">
+	<div style="float:left;">			
+		<b>QC: </b><a>0901.05.05.17</a>, contact@awing.vn
+	</div>
+	<div style="float:right;text-align:right;">
+		highlandscoffee.com.vn
+	</div>
+</div>
+</div>
+<script>
+    $("#layoutFooter").load('/static/Files/layout/5197905656409960384/4857469430519615278/Footer.html');
+</script>
+    <div style="clear:both"></div>
+    
+
+</body></html>

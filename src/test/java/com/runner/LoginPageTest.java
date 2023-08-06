@@ -19,6 +19,14 @@ public class LoginPageTest extends SetupPage {
         loginPage.passwordEnter.sendKeys("admin123");
         loginPage.submitButton.click();
         loginPage.dashboardLayout.exists();
+    }
+
+    @Test
+    public void loginWithLogout() throws InterruptedException {
+        loginPage.usernameEnter.sendKeys("Admin");
+        loginPage.passwordEnter.sendKeys("admin123");
+        loginPage.submitButton.click();
+        loginPage.dashboardLayout.exists();
         Thread.sleep(10000);
         loginPage.logoutScrollDownButton.click();
         Thread.sleep(2000);
@@ -69,21 +77,4 @@ public class LoginPageTest extends SetupPage {
         Thread.sleep(2000);
     }
 
-    // Data-driven test using CSV file
-    @Test
-    public void testLoginWithCSVData() throws IOException, InterruptedException, CsvValidationException {
-        String csvFile = "src/test/resources/testData.csv";
-        CSVReader reader = new CSVReader(new FileReader(csvFile));
-        String[] data;
-        while ((data = reader.readNext()) != null) {
-            String username = data[0];
-            String password = data[1];
-
-            loginPage.usernameEnter.sendKeys(username);
-            loginPage.passwordEnter.sendKeys(password);
-            loginPage.submitButton.click();
-            Thread.sleep(2000);
-        }
-        reader.close();
-    }
 }

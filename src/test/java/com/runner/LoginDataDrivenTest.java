@@ -1,11 +1,14 @@
 package com.runner;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
-import org.testng.annotations.Test;
+import com.page.LoginPage;
+import com.setup.SetupPage;
+import org.junit.jupiter.api.Test;
 
 import java.io.FileReader;
 import java.io.IOException;
-public class DataDrivenTest {
+public class LoginDataDrivenTest extends SetupPage {
+    LoginPage loginPage = new LoginPage();
     @Test
     public void testLoginWithCSVData() throws IOException, InterruptedException, CsvValidationException {
         String csvFile = "src/test/resources/testData.csv";
@@ -15,10 +18,10 @@ public class DataDrivenTest {
             String username = data[0];
             String password = data[1];
 
-            // Your test code to perform login using the provided username and password
-            System.out.println("Testing login with username: " + username + " and password: " + password);
-            // Your assertions and test steps here
-            Thread.sleep(5000);
+            loginPage.usernameEnter.sendKeys(username);
+            loginPage.passwordEnter.sendKeys(password);
+            loginPage.submitButton.click();
+            Thread.sleep(2000);
         }
         reader.close();
     }
