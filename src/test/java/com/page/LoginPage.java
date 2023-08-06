@@ -10,5 +10,11 @@ public class LoginPage {
     public  SelenideElement passwordEnter = $("input[name='password']");
     public  SelenideElement loginErrorMessage =$("p[data-v-7b563373]");
     public SelenideElement dashboardLayout = $("[data-v-f0c5131f]");
+    public SelenideElement logoutScrollDownButton = $("[data-v-bdd6d943]");
+    public SelenideElement logoutButton =$("[href=\"/web/index.php/auth/logout\"]");
+    public SelenideElement loginPage =$("[data-v-358db50f]");
+    public SelenideElement requireMessage =$("[data-v-957b4417]");
+    public SelenideElement requireMessagePassword =$("[data-v-7b563373]");
+
 }
 

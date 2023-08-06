@@ -20,23 +20,23 @@ public class SetupPage {
     }
 
     // Google Chrome Driver
-//    @BeforeEach
-//    public void setUp() {
-//        Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-//        open("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-//    }
-
-    //Microsoft Edge Driver
     @BeforeEach
-    public void setUpEdge(){
-        EdgeOptions edgeOptions = new EdgeOptions();
-        edgeOptions.addArguments("--remote-allow-origins=*");
-
-        Configuration.browserCapabilities = edgeOptions;
-        Configuration.browser = "edge";
-
+    public void setUp() {
+        Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
         open("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
+
+    //Microsoft Edge Driver
+//    @BeforeEach
+//    public void setUpEdge(){
+//        EdgeOptions edgeOptions = new EdgeOptions();
+//        edgeOptions.addArguments("--remote-allow-origins=*");
+//
+//        Configuration.browserCapabilities = edgeOptions;
+//        Configuration.browser = "edge";
+//
+//        open("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+//    }
 
     // FireFox Driver
 //    @BeforeEach
