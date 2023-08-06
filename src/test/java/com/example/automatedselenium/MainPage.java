@@ -12,9 +12,4 @@ public class MainPage {
     public SelenideElement toolsMenu = $x("//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']");
     public SelenideElement searchButton = $("[data-test='site-header-search-action']");
 
-    public SelenideElement submitButton = $("button[type='submit']");
-    public SelenideElement usernameInput = $("input[name='username']");
-    public SelenideElement passwordInput = $("input[name='password']");
-
-    public SelenideElement loginErrorMsg =$("p[data-v-7b563373]");
 }

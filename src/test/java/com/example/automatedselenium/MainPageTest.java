@@ -3,6 +3,7 @@ package com.example.automatedselenium;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.page.LoginPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -18,12 +19,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageTest {
     MainPage mainPage = new MainPage();
-    @FindBy(name = "username")
-    WebElement usernameInput;
-    @FindBy(name = "password")
-    WebElement passwordInput;
-    @FindBy(css = "[type=submit]")
-    WebElement submitBtn;
+    LoginPage loginPage = new LoginPage();
 
     @BeforeAll
     public static void setUpAll() {
@@ -41,19 +37,19 @@ public class MainPageTest {
 
     @Test
     public void login() throws InterruptedException {
-        mainPage.usernameInput.sendKeys("Admin");
-        mainPage.passwordInput.sendKeys("admin123");
-        mainPage.submitButton.click();
+        loginPage.usernameEnter.sendKeys("Admin");
+        loginPage.passwordEnter.sendKeys("admin123");
+        loginPage.submitButton.click();
         Thread.sleep(2000);
     }
 
     @Test
     public void loginFailed() throws InterruptedException {
-        mainPage.usernameInput.sendKeys("yen");
-        mainPage.passwordInput.sendKeys("admin123");
-        mainPage.submitButton.click();
-        mainPage.usernameInput.shouldNotHave(attribute("value","Admin"));
-        mainPage.loginErrorMsg.should(exactText("Invalid credentials"));
+        loginPage.usernameEnter.sendKeys("yen");
+        loginPage.passwordEnter.sendKeys("admin123");
+        loginPage.submitButton.click();
+        loginPage.usernameEnter.shouldNotHave(attribute("value","Admin"));
+        loginPage.loginErrorMessage.should(exactText("Invalid credentials"));
         Thread.sleep(2000);
     }
 
