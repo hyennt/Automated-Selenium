@@ -1,17 +1,15 @@
 package com.runner;
 
-import com.codeborne.selenide.Condition;
 import com.page.SearchPage;
-import com.setup.DashboardPage;
+import com.setup.ChromeSetUpPage;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.exist;
 
-public class SearchPageTest extends DashboardPage {
+public class SearchPageTest extends ChromeSetUpPage {
 
     SearchPage searchPage = new SearchPage();
-    LoginPageTest loginPageTest = new LoginPageTest();
+    LoginPageTestEdge loginPageTest = new LoginPageTestEdge();
     @Test
     public void enterAdminPage() {
         searchPage.topDownButton.click();

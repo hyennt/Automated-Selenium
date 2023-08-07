@@ -2,13 +2,12 @@ package com.runner;
 
 import com.page.AddUserPage;
 import com.page.SearchPage;
-import com.setup.DashboardPage;
-import com.setup.SetupPage;
+import com.setup.ChromeSetUpPage;
 import org.junit.jupiter.api.Test;
 
-public class AddUserPageTest extends DashboardPage {
+public class AddUserPageTest extends ChromeSetUpPage {
     AddUserPage addUserPage = new AddUserPage();
-    LoginPageTest loginPageTest = new LoginPageTest();
+    LoginPageTestEdge loginPageTest = new LoginPageTestEdge();
     SearchPage searchPage = new SearchPage();
     @Test
     private void enterAdminPage() {

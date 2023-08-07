@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.chrome.ChromeOptions;
 import static com.codeborne.selenide.Selenide.open;
 
-public class DashboardPage {
+public class ChromeSetUpPage {
     @BeforeAll
     public static void setUpAll() {
         Configuration.browserSize = "1280x800";

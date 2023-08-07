@@ -2,14 +2,14 @@ package com.runner;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import com.page.LoginPage;
-import com.setup.SetupPage;
+import com.setup.EdgeSetupPage;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Objects;
 
-public class LoginDataDrivenTest extends SetupPage {
+public class LoginDataDrivenTest extends EdgeSetupPage {
     LoginPage loginPage = new LoginPage();
     @Test
     public void testLoginWithCSVData() throws IOException, InterruptedException, CsvValidationException {
