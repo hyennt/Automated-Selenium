@@ -1,26 +1,20 @@
 package com.page;
 
+import com.codeborne.selenide.SelenideElement;
+import static com.codeborne.selenide.Selenide.$;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    @FindBy(name = "username")
-    WebElement usernameInput;
-    @FindBy(name = "password")
-    WebElement passwordInput;
-    @FindBy(css = "[type=submit]")
-    WebElement submitBtn;
+    public  SelenideElement submitButton = $("button[type='submit']");
+    public  SelenideElement usernameEnter = $("input[name='username']");
+    public  SelenideElement passwordEnter = $("input[name='password']");
+    public  SelenideElement loginErrorMessage =$("p[data-v-7b563373]");
+    public SelenideElement dashboardLayout = $("[data-v-f0c5131f]");
+    public SelenideElement logoutScrollDownButton = $("[data-v-bdd6d943]");
+    public SelenideElement logoutButton =$("[href=\"/web/index.php/auth/logout\"]");
+    public SelenideElement loginPage =$("[data-v-358db50f]");
+    public SelenideElement requireMessage =$("[data-v-957b4417]");
+    public SelenideElement requireMessagePassword =$("[data-v-7b563373]");
 
-    public LoginPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-    }
-    public void loginProcess(String username, String password) {
-        usernameInput.sendKeys(username);
-        passwordInput.sendKeys(password);
-        submitBtn.click();
-    }
 }
 
