@@ -1,14 +1,14 @@
 package com.runner;
 
-import com.codeborne.selenide.Condition;
 import com.page.SearchPage;
-import com.setup.DashboardPage;
+import com.setup.ChromeSetUpPage;
+import com.setup.FireFoxSetUpPage;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.exist;
 
-public class SearchPageTest extends DashboardPage {
+public class SearchPageTest extends FireFoxSetUpPage {
 
     SearchPage searchPage = new SearchPage();
     LoginPageTest loginPageTest = new LoginPageTest();
@@ -26,7 +26,8 @@ public class SearchPageTest extends DashboardPage {
     searchPage.userRoleListBox.exists();
     searchPage.essEnterField.click();
     searchPage.searchButton.click();
-    Thread.sleep(5000);
+    Thread.sleep(3000);
+    searchPage.userRoleListBox.should(exist);
     }
     @Test
     public void usernameSearchField() throws InterruptedException{
@@ -35,6 +36,7 @@ public class SearchPageTest extends DashboardPage {
         searchPage.userNameUserEnter.sendKeys("Admin");
         searchPage.searchButton.click();
         Thread.sleep(5000);
+        searchPage.userRoleListBox.should(exist);
     }
 
 
@@ -46,6 +48,7 @@ public class SearchPageTest extends DashboardPage {
         searchPage.searchButton.click();
         searchPage.invalidMessage.shouldBe(exactText("Invalid"));
         Thread.sleep(5000);
+        searchPage.userRoleListBox.should(exist);
     }
 
 }

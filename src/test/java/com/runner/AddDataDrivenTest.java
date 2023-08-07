@@ -1,6 +1,6 @@
 package com.runner;
 
-import com.setup.SetupPage;
+import com.setup.EdgeSetupPage;
 
-public class AddDataDrivenTest extends SetupPage {
+public class AddDataDrivenTest extends EdgeSetupPage {
 }

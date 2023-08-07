@@ -1,16 +1,12 @@
 package com.runner;
 
-import com.opencsv.exceptions.CsvValidationException;
 import com.page.LoginPage;
-import com.setup.SetupPage;
+import com.setup.EdgeSetupPage;
 import org.junit.jupiter.api.Test;
-import com.opencsv.CSVReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 import static com.codeborne.selenide.Condition.*;
 
-public class LoginPageTest extends SetupPage {
+public class LoginPageTest extends EdgeSetupPage {
     LoginPage loginPage = new LoginPage();
 
     @Test
@@ -18,7 +14,7 @@ public class LoginPageTest extends SetupPage {
         loginPage.usernameEnter.sendKeys("Admin");
         loginPage.passwordEnter.sendKeys("admin123");
         loginPage.submitButton.click();
-        loginPage.dashboardLayout.exists();
+        loginPage.dashboardLayout.should(exist);
     }
 
     @Test
@@ -35,6 +31,17 @@ public class LoginPageTest extends SetupPage {
         loginPage.loginPage.should(exist);
         Thread.sleep(2000);
 
+    }
+
+    @Test
+    public void logout() throws InterruptedException{
+        //login();
+        loginPage.logoutScrollDownButton.click();
+        Thread.sleep(2000);
+        loginPage.logoutButton.click();
+        Thread.sleep(7000);
+        loginPage.loginPage.should(exist);
+        Thread.sleep(2000);
     }
 
     @Test
