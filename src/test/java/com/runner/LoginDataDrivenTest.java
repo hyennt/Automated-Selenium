@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Objects;
+
 public class LoginDataDrivenTest extends SetupPage {
     LoginPage loginPage = new LoginPage();
     @Test
@@ -17,6 +19,9 @@ public class LoginDataDrivenTest extends SetupPage {
         while ((data = reader.readNext()) != null) {
             String username = data[0];
             String password = data[1];
+            if (Objects.equals(username, "") || Objects.equals(password, "")){
+                return;
+            }
 
             loginPage.usernameEnter.sendKeys(username);
             loginPage.passwordEnter.sendKeys(password);

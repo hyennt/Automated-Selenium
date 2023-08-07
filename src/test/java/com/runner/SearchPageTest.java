@@ -13,11 +13,10 @@ public class SearchPageTest extends DashboardPage {
     SearchPage searchPage = new SearchPage();
     LoginPageTest loginPageTest = new LoginPageTest();
     @Test
-    private void enterAdminPage() {
+    public void enterAdminPage() {
         searchPage.topDownButton.click();
         searchPage.adminPageButton.click();
     }
-
     @Test
     public void SearchFAllField() throws InterruptedException{
     loginPageTest.login();
@@ -30,31 +29,23 @@ public class SearchPageTest extends DashboardPage {
     Thread.sleep(5000);
     }
     @Test
-    public void adminSearchField() throws InterruptedException{
-
-    }
-    @Test
-    public void enabledSearchField() throws InterruptedException{
-
-    }
-    @Test
-    public void disabledSearchField() throws InterruptedException{
-
-    }
-    @Test
     public void usernameSearchField() throws InterruptedException{
         loginPageTest.login();
         enterAdminPage();
         searchPage.userNameUserEnter.sendKeys("Admin");
         searchPage.searchButton.click();
         Thread.sleep(5000);
-
     }
 
 
     @Test
     public void employeeNameSearchField() throws InterruptedException{
-
+        loginPageTest.login();
+        enterAdminPage();
+        searchPage.employeeNameEnter.sendKeys("Anthony  Nolan");
+        searchPage.searchButton.click();
+        searchPage.invalidMessage.shouldBe(exactText("Invalid"));
+        Thread.sleep(5000);
     }
 
 }
