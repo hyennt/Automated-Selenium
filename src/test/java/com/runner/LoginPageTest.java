@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
 
-public class LoginPageTestEdge extends EdgeSetupPage {
+public class LoginPageTest extends EdgeSetupPage {
     LoginPage loginPage = new LoginPage();
 
     @Test
@@ -31,6 +31,17 @@ public class LoginPageTestEdge extends EdgeSetupPage {
         loginPage.loginPage.should(exist);
         Thread.sleep(2000);
 
+    }
+
+    @Test
+    public void logout() throws InterruptedException{
+        //login();
+        loginPage.logoutScrollDownButton.click();
+        Thread.sleep(2000);
+        loginPage.logoutButton.click();
+        Thread.sleep(7000);
+        loginPage.loginPage.should(exist);
+        Thread.sleep(2000);
     }
 
     @Test

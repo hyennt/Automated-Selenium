@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class AddUserPageTest extends ChromeSetUpPage {
     AddUserPage addUserPage = new AddUserPage();
-    LoginPageTestEdge loginPageTest = new LoginPageTestEdge();
+    LoginPageTest loginPageTest = new LoginPageTest();
     SearchPage searchPage = new SearchPage();
     @Test
     private void enterAdminPage() {

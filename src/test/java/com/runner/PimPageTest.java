@@ -6,7 +6,7 @@ import com.setup.ChromeSetUpPage;
 import org.junit.jupiter.api.Test;
 
 public class PimPageTest extends ChromeSetUpPage {
-    LoginPageTestEdge loginPageTest = new LoginPageTestEdge();
+    LoginPageTest loginPageTest = new LoginPageTest();
     PimPage pimPage = new PimPage();
     @Test
     public void AddEmptyFieldEmployee() throws InterruptedException {
@@ -24,15 +24,17 @@ public class PimPageTest extends ChromeSetUpPage {
     }
 
     @Test
-    public void AddEmptyFieldParam() throws InterruptedException{
+    public void AddEmptyFirstNameEmployee() throws InterruptedException{
         loginPageTest.login();
         pimPage.pimButton.click();
         pimPage.addButton.click();
         pimPage.firsNameField.sendKeys("");
         pimPage.middleNameField.sendKeys("Thuy");
-        pimPage.lastNameField.sendKeys("");
+        pimPage.lastNameField.sendKeys("Ng");
         pimPage.saveButton.click();
-
+        pimPage.requireMessgage.should(Condition.exist);
+        pimPage.redirectUserPage.shouldNot(Condition.exist);
+        Thread.sleep(5000);
     }
 
     @Test
@@ -45,8 +47,7 @@ public class PimPageTest extends ChromeSetUpPage {
         pimPage.middleNameField.sendKeys("middleName");
         pimPage.lastNameField.sendKeys("Nguyen");
         pimPage.saveButton.click();
-//        pimPage.personalDetail.should(Condition.exist);
-       // pimPage.redirectUserPage.should(Condition.exist);
-        Thread.sleep(5000);
+        pimPage.userPage.should(Condition.exist);
+        Thread.sleep(10000);
     }
 }

@@ -11,5 +11,6 @@ public class PimPage {
     public SelenideElement saveButton =$("button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space[type='submit'][data-v-10d463b7][data-v-7fe2d320]");
     public SelenideElement redirectUserPage =$("[href=\"/web/index.php/pim/viewPersonalDetails/empNumber\"]");
     public SelenideElement requireMessgage =$("span.oxd-text.oxd-text--span.oxd-input-field-error-message.oxd-input-group__message[data-v-7b563373][data-v-957b4417]");
-    public SelenideElement personalDetail=$("[data-v-0349f171][data-v-b6d78ace]");
+    public SelenideElement userPage =$(".oxd-layout-context[data-v-130c27f5]");
+    public SelenideElement logoutPage =$("[href=\"/web/index.php/auth/login\"]");
 }

@@ -20,7 +20,7 @@ public class FireFoxSetUpPage {
     @BeforeEach
     public void setUpFireFox(){
         FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.addArguments("--some-firefox-specific-argument"); // Add any specific Firefox options here
+        firefoxOptions.addArguments("--some-firefox-specific-argument");
 
         Configuration.browserCapabilities = firefoxOptions;
         Configuration.browser = "firefox";
