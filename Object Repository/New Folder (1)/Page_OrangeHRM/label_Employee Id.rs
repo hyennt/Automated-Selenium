@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>label_Employee Id</name>
+   <tag></tag>
+   <elementGuidId>f3bc67cd-3902-4fef-a482-7e5bd5153286</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li:nth-of-type(2) > label</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//form[@id='frmAddEmp']/fieldset/ol/li[2]/label</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+      <webElementGuid>2bc252b2-04e1-4eb7-bd5d-2cd0265461e8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>employeeId</value>
+      <webElementGuid>fce2f692-cf23-4515-878f-9e08c9e4101d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Employee Id</value>
+      <webElementGuid>b80e3770-5f7e-4079-9d3f-87c69ab7fac7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;frmAddEmp&quot;)/fieldset[1]/ol[1]/li[2]/label[1]</value>
+      <webElementGuid>c5049226-c2f3-4733-a883-8ed9e600cff6</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//form[@id='frmAddEmp']/fieldset/ol/li[2]/label</value>
+      <webElementGuid>84d72344-16fe-46c5-9b21-7378b624f0e4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='*'])[2]/following::label[1]</value>
+      <webElementGuid>54c46950-e33b-458d-93c5-aad10a8ae23c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Photograph'])[1]/preceding::label[1]</value>
+      <webElementGuid>6fbfed97-498e-45b9-bc29-697d139af552</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Accepts jpg, .png, .gif up to 1MB. Recommended dimensions: 200px X 200px'])[1]/preceding::label[2]</value>
+      <webElementGuid>3afa7919-71d3-4c62-aa49-983f1ed3f1f9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Employee Id']/parent::*</value>
+      <webElementGuid>d90f41de-1d96-4ab6-93c1-cc0d9c39ac53</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[2]/label</value>
+      <webElementGuid>e0d642bb-7730-45e6-9781-4c931d640d75</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//label[(text() = 'Employee Id' or . = 'Employee Id')]</value>
+      <webElementGuid>c084abab-315e-4291-83bd-f15ef87e4244</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

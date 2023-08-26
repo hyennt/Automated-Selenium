@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>label_Full Name</name>
+   <tag></tag>
+   <elementGuidId>4e7069f6-84e4-4aa9-88a7-045632a3acd4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>label.hasTopFieldHelp</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//form[@id='frmEmpPersonalDetails']/fieldset/ol/li/label</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+      <webElementGuid>72e0bf00-33d4-4518-971c-7c686b72a3b7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>Full_Name</value>
+      <webElementGuid>9c1b8287-0e46-4154-801b-feaae4da55a5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>hasTopFieldHelp</value>
+      <webElementGuid>c05b7cd1-f8ce-4e2b-8b14-985d34ed5a57</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Full Name</value>
+      <webElementGuid>14ec41d3-3b4f-4513-a3ea-d23d2d63be9c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;frmEmpPersonalDetails&quot;)/fieldset[1]/ol[1]/li[@class=&quot;line nameContainer&quot;]/label[@class=&quot;hasTopFieldHelp&quot;]</value>
+      <webElementGuid>0ac68ebe-ed73-41e7-94bb-b659ca295436</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//form[@id='frmEmpPersonalDetails']/fieldset/ol/li/label</value>
+      <webElementGuid>bf7e6813-fc42-4eae-a22a-45a913ffdbbf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Personal Details'])[2]/following::label[1]</value>
+      <webElementGuid>dda911b3-6b58-495a-bc53-0738741070f9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Memberships'])[2]/following::label[1]</value>
+      <webElementGuid>13bfbce0-85e4-4e39-af31-14c3264f1075</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='*'])[1]/preceding::label[1]</value>
+      <webElementGuid>a8e575c4-d330-4426-aae8-cbf3a3a60dc9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Full Name']/parent::*</value>
+      <webElementGuid>1ab0bdfb-eaeb-4e10-bb24-6c69631b37c3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//label</value>
+      <webElementGuid>82714306-18f1-4d61-8ffd-d5915f34413f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//label[(text() = 'Full Name' or . = 'Full Name')]</value>
+      <webElementGuid>5ad1baf7-5d4f-4cca-a0c1-b1e2f22cf87d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

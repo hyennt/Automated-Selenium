@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC2</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3b983fcd-bea0-42ec-85b5-e5d25233e991</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1be94411-274d-41dc-b8e5-38ebc9822373</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1be94411-274d-41dc-b8e5-38ebc9822373</id>
+      <masked>false</masked>
+      <name>EmpName</name>
+   </variable>
+</TestCaseEntity>

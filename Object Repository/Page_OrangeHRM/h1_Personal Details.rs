@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h1_Personal Details</name>
+   <tag></tag>
+   <elementGuidId>2803cfee-17c8-4afe-a497-cfab6f929d0c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.head > h1</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='pdMainContainer']/div/h1</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h1</value>
+      <webElementGuid>9d21832e-538d-4f1d-a6f3-ea70e96c0396</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Personal Details</value>
+      <webElementGuid>2d03bdaf-4c13-4765-844f-1e8ef761db79</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;pdMainContainer&quot;)/div[@class=&quot;head&quot;]/h1[1]</value>
+      <webElementGuid>21366106-df77-44b5-8229-0dccb9ef1209</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='pdMainContainer']/div/h1</value>
+      <webElementGuid>14602949-53f0-4935-8792-822ceeaf7d15</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Memberships'])[2]/following::h1[1]</value>
+      <webElementGuid>1c98f16f-4b10-4c83-b9fe-c7f4a14bea4f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Qualifications'])[2]/following::h1[1]</value>
+      <webElementGuid>dd657aec-ecef-44d3-9fe8-2a9792ab4657</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Full Name'])[1]/preceding::h1[1]</value>
+      <webElementGuid>b2ec96b4-4f1b-44d7-b3b2-af96ce12ee9c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/h1</value>
+      <webElementGuid>0a5d0724-13c6-41b0-92d6-8f85333d2568</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//h1[(text() = 'Personal Details' or . = 'Personal Details')]</value>
+      <webElementGuid>0eb2faf7-2f2d-4826-9760-de1338cc43fc</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

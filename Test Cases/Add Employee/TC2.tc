@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC2</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fe15e800-6733-4761-a0b9-adf8b6eb1bd7</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>8ba75b89-a8b5-4ba5-8595-06e7eedf9db2</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>9ee58f85-047e-4cda-aecd-92fc4e05b52a</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>35654e2c-2a59-4cbf-ac6a-73966d7c8b90</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>8ba75b89-a8b5-4ba5-8595-06e7eedf9db2</id>
+      <masked>false</masked>
+      <name>MidName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>9ee58f85-047e-4cda-aecd-92fc4e05b52a</id>
+      <masked>false</masked>
+      <name>LastName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>35654e2c-2a59-4cbf-ac6a-73966d7c8b90</id>
+      <masked>false</masked>
+      <name>Id</name>
+   </variable>
+</TestCaseEntity>

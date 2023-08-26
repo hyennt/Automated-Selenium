@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>td_A Van</name>
+   <tag></tag>
+   <elementGuidId>698d8e54-059a-47f1-aaf5-82afdc735d95</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//table[@id='resultTable']/tbody/tr[10]/td[3]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>td</value>
+      <webElementGuid>6fe75f02-4749-4f03-a1f3-06594b897401</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>left</value>
+      <webElementGuid>17d27620-8c9e-4115-888a-7f00503d7575</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>A Van</value>
+      <webElementGuid>a8b4bfce-13c4-422e-b874-9094e2996f5a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;resultTable&quot;)/tbody[1]/tr[@class=&quot;even&quot;]/td[@class=&quot;left&quot;]</value>
+      <webElementGuid>3b15388c-e3a2-4f7f-8f6d-2f04d14d92cf</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//table[@id='resultTable']/tbody/tr[10]/td[3]</value>
+      <webElementGuid>ce9e1b32-a0d6-4cd9-8975-7acee68deca9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Group6'])[2]/following::td[4]</value>
+      <webElementGuid>6b12ee37-7a35-4c49-8bb3-8977d341e6ce</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Job'])[10]/following::td[6]</value>
+      <webElementGuid>4407012a-65be-4d2e-8756-b3c51edfb002</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Nguyen'])[1]/preceding::td[1]</value>
+      <webElementGuid>a57b5c47-42d1-4014-a043-6beceb5f5d8e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//tr[10]/td[3]</value>
+      <webElementGuid>55897bd9-c0ea-49b0-86b6-165bba47a8be</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//td[(text() = 'A Van' or . = 'A Van')]</value>
+      <webElementGuid>d66e90a3-1ab2-4d10-86e9-8f160d41fbb2</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

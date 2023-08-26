@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC3</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f5b4b695-24e6-4d04-90cb-8b46286ef82b</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2042126c-545c-4948-b675-4113e01e6903</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f558cc07-9384-4f5a-8235-d1c438dd6e5d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>491ef8cf-3f85-44a7-8ad6-902e3ac8d395</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2042126c-545c-4948-b675-4113e01e6903</id>
+      <masked>false</masked>
+      <name>FirstName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f558cc07-9384-4f5a-8235-d1c438dd6e5d</id>
+      <masked>false</masked>
+      <name>MidName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>491ef8cf-3f85-44a7-8ad6-902e3ac8d395</id>
+      <masked>false</masked>
+      <name>Id</name>
+   </variable>
+</TestCaseEntity>
